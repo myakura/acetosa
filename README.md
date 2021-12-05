@@ -1,1 +1,1 @@
-A browser extension to show how many tabs on your window.
+A browser extension to show how many tabs you have on your window.
