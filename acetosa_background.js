@@ -1,6 +1,13 @@
 function countTabs() {
 	chrome.tabs.query({ currentWindow: true }, (tabs) => {
-		console.log(tabs.length);
+		const tabCount = tabs.length;
+		console.log(tabCount);
+		chrome.browserAction.setTitle({
+			title: `Yout have ${tabCount} length`,
+		});
+		chrome.browserAction.setBadgeText({
+			text: `${tabCount}`,
+		})
 	});
 }
 
