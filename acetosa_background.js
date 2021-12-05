@@ -7,7 +7,7 @@ function countTabs() {
 		});
 		chrome.browserAction.setBadgeText({
 			text: `${tabCount}`,
-		})
+		});
 	});
 }
 
