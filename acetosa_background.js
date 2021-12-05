@@ -3,7 +3,7 @@ function countTabs() {
 		const tabCount = tabs.length;
 		console.log(tabCount);
 		chrome.browserAction.setTitle({
-			title: `Yout have ${tabCount} length`,
+			title: `Yout have ${tabCount} tabs.`,
 		});
 		chrome.browserAction.setBadgeText({
 			text: `${tabCount}`,
