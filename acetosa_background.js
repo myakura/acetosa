@@ -72,4 +72,6 @@ chrome.windows.onFocusChanged.addListener(async (windowId) => {
 	}
 });
 
-countTabs();
+(async function () {
+	await countTabs();
+})();
