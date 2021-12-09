@@ -14,9 +14,8 @@ function updateCountView(tabCount) {
 	chrome.browserAction.setTitle({
 		title: `You have ${tabCount} tabs.`,
 	});
-	chrome.browserAction.setBadgeText({
-		text: `${tabCount}`,
-	});
+	chrome.browserAction.setBadgeText({ text: `${tabCount}` });
+	chrome.browserAction.setBadgeBackgroundColor({ color: `#36f` });
 }
 
 async function countTabs(windowId) {
