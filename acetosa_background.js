@@ -75,3 +75,13 @@ chrome.windows.onFocusChanged.addListener(async (windowId) => {
 (async function () {
 	await countTabs();
 })();
+
+function updateIcon(darkModeChange) {
+	const isDarkMode = darkModeChange?.matches ?? false;
+	const path = isDarkMode ? `icon_dark.png` : `icon_light.png`;
+	chrome.browserAction.setIcon({ path: path });
+}
+
+const mqDarkMode = window.matchMedia(`(prefers-color-scheme: dark)`);
+mqDarkMode.addEventListener(`change`, updateIcon);
+updateIcon(mqDarkMode);

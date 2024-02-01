@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Acetosa",
 	"description": "Count tabs.",
-	"version": "0.0.9",
+	"version": "0.1.0",
 	"background": {
 		"scripts": ["acetosa_background.js"]
 	},
